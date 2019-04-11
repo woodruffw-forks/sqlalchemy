@@ -127,7 +127,7 @@ from .engine import create_mock_engine  # noqa nosort
 # sqlalchemy.engine that cause import cycles
 
 
-__version__ = "1.4.0b1"
+__version__ = '2.0.0b1'
 
 
 def __go(lcls):
