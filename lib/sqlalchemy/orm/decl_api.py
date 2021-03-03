@@ -156,6 +156,8 @@ class declared_attr(interfaces._MappedAttribute, property):
     def __init__(self, fget, cascading=False):
         super(declared_attr, self).__init__(fget)
         self.__doc__ = fget.__doc__
+        if hasattr(fget, "__annotations__"):
+            self.__annotations__ = fget.__annotations__
         self._cascading = cascading
 
     def __get__(desc, self, cls):
